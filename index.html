@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- README.md 스펙 1: 모바일 물리 화면폭 인식을 위한 뷰포트 메타태그 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Maldives Paradise Resort</title>
+    
+    <!-- README.md 스펙 2: FontAwesome 4.1.0 아이콘 라이브러리 및 구글 웹폰트 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+    <!-- 제공된 style.css 원본 (단 한 줄도 수정하지 않음) -->
+    <style>
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+/* reset */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body { font:12px/1.6 'Poiret One'; color:#555; } 
+
+
+/*레이아웃*/
+header { position:fixed; width:15%; height:100%; background:#fff; top:0px; left:0px; transition:all 0.5s;}
+nav { position:relative; width:85%; height:35px; background:#212121; margin-left:15%; transition:all 0.5s;}
+section { width:85%; position:relative; margin-left:15%;}
+article { float:left; height:260px; transition:all 0.5s; animation:scale 1s 1;}
+article:nth-child(1) { width:60%; height:520px; background:#ddd;}
+article:nth-child(2) { width:40%; background:#ccc;}
+article:nth-child(3) { width:20%; background:#bbb;}
+article:nth-child(4) { width:20%; background:#aaa;}
+article:nth-child(5) { width:20%; background:#999;}
+article:nth-child(6) { width:40%; background:#888;}
+article:nth-child(7) { width:20%; background:#777;}
+article:nth-child(8) { width:20%; background:#666;}
+article:nth-child(9) { width:40%; background:#555;}
+article:nth-child(10) { width:20%;	background:#444;}
+article:nth-child(11) { width:20%; background:#333;}
+article:nth-child(12) { width:20%;	background:#222;}
+@keyframes scale {
+	0% { transform:scale(0); }	
+	100% { transform:scale(1); }
+}
+article>div { position:relative; width:100%; height:100%; overflow:hidden; cursor:pointer; }
+
+/* header 컨텐츠 */
+header h1 { width:180px; height:136px; background:url(../img/logo1.png) no-repeat 0px 0px; background-size:contain; position:absolute; top:70px;	left:50%; margin-left:-90px;	text-indent:-99999px;}
+#gnb { position:absolute; top:300px; right:57px;}
+#gnb a { display:block; padding:8px 30px;	font-size:17px; font-weight:bold; color:#555; text-align:left; line-height:1.8; transition:all .5s;}
+#gnb a:hover { color:skyblue;}
+#gnb a i { margin-right:13px;}
+.snsSet { width:90px;	height:47px;	position:absolute; bottom:50px; right:50%; margin-right:-45px;}
+.snsSet a { float:left;}
+
+/*nav*/
+nav a:nth-child(1) {	position:absolute; top:5px;	left:10px;}
+nav a:nth-child(2) {	position:absolute; top:5px;	left:150px;}
+nav a:nth-child(3) {	position:absolute; top:5px;	right:90px;}
+nav a:nth-child(4) {	position:absolute; top:5px;	right:10px;}
+
+article>div { position:relative; width:100%; height:100%; overflow:hidden; cursor:pointer; }
+
+/* 배경이미지 삽입*/
+article .bg1 { background-image:url(../img/pic1.jpg);}
+article .bg2 { background-image:url(../img/pic2.jpg);}
+article .bg3 { background-image:url(../img/pic3.jpg);}
+article .bg4 { background-image:url(../img/pic4.jpg);}
+article .bg5 { background-image:url(../img/pic5.jpg);}
+article .bg6 { background-image:url(../img/pic6.jpg);}
+article .bg7 { background-image:url(../img/pic7.jpg);}
+
+/* 이미지박스 */
+article .bg { background-size:cover; background-position:center center; }
+article .bg span { font-size:60px; color:#fff;	position:absolute; bottom:0px; right:20px; transform:scale(10); opacity:0;	transition:all 0.6s;}
+article .bg1 span { font-size:170px; bottom:-76px;	right:-6px; opacity:1; transform:scale(1); transition:all 0.5s;}
+
+/*이미지박스 호버효과*/
+article:hover .bg span { opacity:1; transform:scale(1);}
+article .bg1:hover span { transform:rotateY(360deg); color:#222; }
+
+/* 텍스트박스 */
+article .txt { color:#666; background:#fff; box-sizing:border-box; padding:40px 30px; transition:all 1s;}
+article:nth-child(3) .txt { background:#bff7fa;}
+article:nth-child(11) .txt { background:#e3f1fb;}
+article .txt i { font-size:300px; color:#b2effc; opacity:0; position:absolute; bottom:-70px; right:-200px; transition:all 0.7s;}
+article:nth-child(3) .txt i {	position:absolute; bottom:-20px; right:-15px; font-size:200px; color:#fff; opacity:0.7;}
+article .txt strong { font-size:30px;	font-weight:normal; line-height:1.6;	color:#444; margin-bottom:20px; transition:all 1s;}
+
+/*텍스트박스 호버효과*/
+article:hover .txt { background:#6ce2fb;	color:#fff;}
+article:hover .txt i { right:0px; opacity:0.5;}
+article:hover .txt strong { color:#fff;}
+
+	
+
+	
+
+@media screen and (min-width:1280px) and (max-width:1599px) {  
+	
+	/*레이아웃*/
+	header { position:relative; width:100%; height:80px;}
+	nav { width:100%; margin-left:0%;}		
+	section { width:100%; margin-left:0px;}	
+	
+	/* header 컨텐츠 */
+	header h1 { width:200px; height:40px; background-image:url(../img/logo2.png); top:20px; left:20px; margin-left:0px;}	
+	#gnb { top:20px; right:200px;}	
+	#gnb li { float:left;}
+	.snsSet { bottom:20px; right:80px;}
+	
+}
+@media screen and (min-width:1024px) and (max-width:1279px) {  
+	
+	/*레이아웃*/
+	header { position:relative; width:100%; height:80px;}
+	nav { width:100%; margin-left:0%;}		
+	section { width:100%; margin-left:0px;}		
+	article:nth-child(1) { width:75%;}	
+	article:nth-child(2) { width:25%;}	
+	article:nth-child(3) { width:25%;}	
+	article:nth-child(4) { width:25%;}	
+	article:nth-child(5) { width:25%;}	
+	article:nth-child(6) { width:50%;}	
+	article:nth-child(7) { width:50%;}	
+	article:nth-child(8) { width:25%;}	
+	article:nth-child(9) { width:25%;}	
+	article:nth-child(10) { width:50%;}	
+	article:nth-child(11) { width:25%;}	
+	article:nth-child(12) { width:25%;}
+	
+	/* header 컨텐츠 */
+	header h1 { width:200px;	height:40px;	background-image:url(../img/logo2.png);	top:20px;	left:20px;	margin-left:0px;}
+	#gnb { top:20px; right:30px;}	
+	#gnb li { float:left;}	
+	.snsSet {	display:none;}
+}
+@media screen and (min-width:780px) and (max-width:1023px) {  
+	
+	/*레이아웃*/
+	header { position:relative; width:100%; height:80px;}
+	nav { width:100%; margin-left:0%;}		
+	section { width:100%; margin-left:0px;}		
+	article:nth-child(1) { width:100%;	height:400px;}	
+	article:nth-child(2) { width:66.6666%;}	
+	article:nth-child(3) { width:33.3333%;}	
+	article:nth-child(4) { width:33.3333%; display:none;}	
+	article:nth-child(5) { width:33.3333%;}	
+	article:nth-child(6) { width:66.6666%;}	
+	article:nth-child(7) { width:66.6666%; display:none;}	
+	article:nth-child(8) { width:33.3333%;}	
+	article:nth-child(9) { width:33.3333%;}	
+	article:nth-child(10) { width:66.6666%; display:none;}	
+	article:nth-child(11) { width:33.3333%;}	
+	article:nth-child(12) { width:33.3333%; display:none;}
+	
+	/* header 컨텐츠 */
+	header h1 { width:200px;	height:40px;	background-image:url(../img/logo2.png); top:20px; left:20px; margin-left:0px;}	
+	#gnb { top:20px; right:10px;}	
+	#gnb li { float:left;}	
+	#gnb a { padding:10px 10px;}		
+	.snsSet { display:none;}	
+}
+@media screen and (min-width:640px) and (max-width:779px) {  
+	
+	/*레이아웃*/
+	header { position:relative; width:100%; height:80px;}
+	nav { width:100%; margin-left:0%;}		
+	section { width:100%; margin-left:0px;}		
+	article:nth-child(1) { width:100%;	height:400px;}
+	article:nth-child(2) { width:100%;}	
+	article:nth-child(3) { width:33.3333%; display:none;}	
+	article:nth-child(4) { width:100%;	display:none;}	
+	article:nth-child(5) { width:50%;}	
+	article:nth-child(6) { width:50%;}	
+	article:nth-child(7) { width:66.6666%; display:none;}	
+	article:nth-child(8) { width:50%;}	
+	article:nth-child(9) { width:50%;}	
+	article:nth-child(10) { width:66.6666%; display:none;}	
+	article:nth-child(11) { width:50%;}	
+	article:nth-child(12) { width:50%;}	
+	
+	/* header 컨텐츠 */
+	header h1 { width:200px;	height:40px;	background-image:url(../img/logo2.png); top:20px; left:20px; margin-left:0px;}	
+	#gnb { top:20px; right:10px;}	
+	#gnb li { float:left;}	
+	#gnb a { padding:10px 10px;}	
+	.snsSet { display:none;}	
+	
+}
+@media screen and (min-width:480px) and (max-width:639px) {  
+	
+	/*레이아웃*/
+	header { position:relative; width:100%; height:130px;}	
+	nav { display:none;}
+	section { width:100%; margin-left:0px;}
+	article { height:150px;}		
+	article:nth-child(1) { width:100%; height:300px;}		
+	article:nth-child(2) { width:100%;}	
+	article:nth-child(3) { width:33.3333%; display:none;}	
+	article:nth-child(4) { width:100%;	display:none;}	
+	article:nth-child(5) { width:50%;}	
+	article:nth-child(6) { width:50%;}	
+	article:nth-child(7) { width:66.6666%; display:none;}	
+	article:nth-child(8) { width:50%;}	
+	article:nth-child(9) { width:50%;}	
+	article:nth-child(10) { width:66.6666%; display:none;}	
+	article:nth-child(11) { width:50%;}	
+	article:nth-child(12) { width:50%;}	
+	
+	/* header 컨텐츠 */
+	header h1 { position:relative; top:20px; left:0px; width:200px; height:45px; background-image:url(../img/logo2.png); margin:0px auto;}
+	#gnb { width:100%; height:40px; top:80px; right:0px;}	
+	#gnb li { float:left; width:25%;}	
+	#gnb a { padding:4px; text-align:center;}	
+	.snsSet { display:none;}	
+	
+	article .bg1 span { font-size:120px; bottom:-50px;}	
+	article .txt strong { font-size:25px;}
+	article .txt em { display:none;}		
+	
+}
+@media screen and (max-width:479px){
+
+	/*레이아웃*/
+	header { position:fixed; width:100%; height:40px; background-color:transparent; z-index:5;}
+	nav { display:none;}	
+	section { width:100%; margin-left:0px; z-index:4;}		
+	article { display:none;}
+	article:nth-child(1) { display:block; position:fixed; width:100%; height:100%;}	
+	
+	/* header 컨텐츠 */
+	header h1 { top:20px; width:140px; margin-left:-70px;}	
+	#gnb { width:250px; top:140px; right:50%; margin-right:-125px;}	
+	#gnb a { width:100%; background:#000; box-sizing:border-box; margin:8px 0px; border-radius:10px; opacity:0.5; color:#fff;}	
+	#gnb a:hover { opacity:1; transform:scale(1.1);}
+	
+	article:nth-child(1) span { display:none;}
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header 영역 -->
+    <header>
+        <!-- Samsung 브랜드 로고 (text-indent:-99999px CSS 규칙 준수) -->
+        <h1 style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 60\'><text x=\'50%\' y=\'38\' font-family=\'Poiret One, sans-serif\' font-size=\'32\' font-weight=\'bold\' fill=\'%231428a0\' text-anchor=\'middle\' dominant-baseline=\'middle\' letter-spacing=\'2\'>SAMSUNG</text></svg>'); background-repeat: no-repeat; background-position: center;">SAMSUNG</h1>
+        
+        <!-- GNB 메뉴 (Samsung 테마 카테고리) -->
+        <ul id="gnb">
+            <li><a href="#"><i class="fa fa-mobile"></i>GALAXY</a></li>
+            <li><a href="#"><i class="fa fa-home"></i>BESPOKE</a></li>
+            <li><a href="#"><i class="fa fa-sliders"></i>SMARTTHINGS</a></li>
+            <li><a href="#"><i class="fa fa-microchip"></i>SEMICON</a></li>
+        </ul>
+        
+        <!-- SNS 아이콘 세트 -->
+        <div class="snsSet">
+            <a href="#"><i class="fa fa-facebook fa-2x" style="color:#555; margin-right:12px;"></i></a>
+            <a href="#"><i class="fa fa-twitter fa-2x" style="color:#555; margin-right:12px;"></i></a>
+            <a href="#"><i class="fa fa-youtube-play fa-2x" style="color:#555;"></i></a>
+        </div>
+    </header>
+
+    <!-- Nav 영역 (nav a:nth-child(1~4) CSS 분기 연동) -->
+    <nav>
+        <a href="#" style="color:#fff; font-weight:bold; font-size:12px;"><i class="fa fa-mobile"></i> MOBILE</a>
+        <a href="#" style="color:#ccc; font-size:12px;"><i class="fa fa-plug"></i> APPLIANCES</a>
+        <a href="#" style="color:#ccc; font-size:12px;"><i class="fa fa-desktop"></i> DISPLAY</a>
+        <a href="#" style="color:#ccc; font-size:12px;"><i class="fa fa-cogs"></i> SEMICONDUCTOR</a>
+    </nav>
+
+    <!-- Section 영역 (총 12개 Article 배치) -->
+    <section>
+
+        <!-- Article 1: Galaxy Z Fold / Flagship Innovation (.bg1 & 3D 회전 애니메이션) -->
+        <article>
+            <div class="bg bg1" style="background-image:url('https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=1200&q=80');">
+                <span>01</span>
+            </div>
+        </article>
+
+        <!-- Article 2: Galaxy Watch & Health AI -->
+        <article>
+            <div class="bg bg2" style="background-image:url('https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80');">
+                <span>02</span>
+            </div>
+        </article>
+
+        <!-- Article 3: Text Card (SmartThings AI Ecosystem) -->
+        <article>
+            <div class="txt">
+                <strong>SmartThings AI</strong>
+                <p>Intelligently connect all home devices with real-time energy optimization and automated living routines.</p>
+                <i class="fa fa-rss"></i>
+            </div>
+        </article>
+
+        <!-- Article 4: Neo QLED 8K Display -->
+        <article>
+            <div class="bg bg3" style="background-image:url('https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=800&q=80');">
+                <span>03</span>
+            </div>
+        </article>
+
+        <!-- Article 5: Bespoke AI Home Appliances -->
+        <article>
+            <div class="bg bg4" style="background-image:url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80');">
+                <span>04</span>
+            </div>
+        </article>
+
+        <!-- Article 6: Semiconductor & Microchip Tech -->
+        <article>
+            <div class="bg bg5" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80');">
+                <span>05</span>
+            </div>
+        </article>
+
+        <!-- Article 7: Galaxy Book Series -->
+        <article>
+            <div class="bg bg6" style="background-image:url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80');">
+                <span>06</span>
+            </div>
+        </article>
+
+        <!-- Article 8: Galaxy Tab Ultra -->
+        <article>
+            <div class="bg bg7" style="background-image:url('https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80');">
+                <span>07</span>
+            </div>
+        </article>
+
+        <!-- Article 9: Galaxy Buds Wireless Audio -->
+        <article>
+            <div class="bg bg2" style="background-image:url('https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80');">
+                <span>08</span>
+            </div>
+        </article>
+
+        <!-- Article 10: Samsung Knox Security -->
+        <article>
+            <div class="bg bg4" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80');">
+                <span>09</span>
+            </div>
+        </article>
+
+        <!-- Article 11: Text Card (ESG & Eco Technology) -->
+        <article>
+            <div class="txt">
+                <strong>ESG & Eco Tech</strong>
+                <p>Pioneering sustainable design through eco-friendly materials, carbon neutrality, and 
